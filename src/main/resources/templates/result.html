@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Results</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="padding: 0 20px;">
+<h1> </h1>
+<h2>Result</h2>
+<div class="my-3">
+    <p><strong>Country:</strong> <span th:text="${status.country}"></span></p>
+    <p><strong>State:</strong> <span th:text="${status.state}"></span></p>
+    <p><strong>City:</strong> <span th:text="${status.city}"></span></p>
+    <p><strong>Date:</strong> <span th:text="${date}"></span></p>
+    <p><strong>US Air Quality Index Value:</strong> <span th:text="${status.Us_AQI}"></span></p>
+    <p><strong>China Air Quality Index Value:</strong> <span th:text="${status.Ch_AQI}"></span></p>
+    <p><strong>Temperature:</strong> <span th:text="${status.temperature}"></span> ºC</p>
+    <p><strong>Pressure:</strong> <span th:text="${status.pressure}"></span> hPa</p>
+    <p><strong>Humidity:</strong> <span th:text="${status.humidity}"></span> %</p>
+    <p><strong>Wind Speed:</strong> <span th:text="${status.wind_speed}"></span> m/s</p>
+    <p><strong>Wind Direction (degrees):</strong> <span th:text="${status.wind_direction}"></span>º</p>
+</div>
+<a th:href="@{/index/}">Search another city</a>
+
+
+</body>
+</html>

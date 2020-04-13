@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Thymeleaf Web Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body  style="padding: 0 20px;">
+<h1> </h1>
+<h1>Get Air Quality</h1>
+<p>
+    Input the following fields in order to get air quality information regarding the selected location.</th:block>
+</p>
+
+<form th:action="@{/index/getAirStatus}" th:object="${status}" method="get">
+    <div class="form-row">
+        <div class="col-md-6 form-group">
+            <label>Country: </label>
+            <input type="text" class="form-control" th:field="*{country}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 form-group">
+            <label>State: </label>
+            <input type="text" class="form-control" th:field="*{state}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 form-group">
+            <label>City: </label>
+            <input type="text" class="form-control" th:field="*{city}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Search Air Quality</button>
+</form>
+
+</body>
+</html>
